@@ -50,9 +50,9 @@ const formatDate = (dateString) => {
             <div key={post.id}>
               {post.yoast_head_json.og_image.map((image) => (
                 <div key={image.url}>
-                  <a href={image.url}>{image.url}</a>
+                  <img src={image.url} alt="Post Image" />
                 </div>
-              ))}{" "}
+              ))}
               <h1>{formatDate(post.date)}</h1>
               {post.excerpt.rendered}
               {post.title.rendered}
