@@ -13,6 +13,7 @@ const pull = () => {
           "https://fl1digital.com/wp-json/wp/v2/posts"
         );
         setData(response.data);
+        console.log(data)
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -23,6 +24,18 @@ const pull = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+const card = () => {
+    return 
+    {}
+
+};
+  
+
+  //this maps all the titles pulled from the API call
   return (
     <div>
       {loading ? (
@@ -30,11 +43,15 @@ const pull = () => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
-        <ul>
+        <div>
           {data.map((post) => (
-            <li key={post.id}>{post.title.rendered}</li>
+            <div key={post.id}>
+              <h1>{post.date}</h1>
+              {post.excerpt.rendered}
+              {post.title.rendered}
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
