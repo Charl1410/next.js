@@ -28,10 +28,9 @@ const pull = () => {
     console.log(data);
   }, [data]);
 
-const card = () => {
-    return 
-    {}
-
+const formatDate = (dateString) => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(dateString).toLocaleDateString(undefined, options);
 };
   
 
@@ -46,7 +45,7 @@ const card = () => {
         <div>
           {data.map((post) => (
             <div key={post.id}>
-              <h1>{post.date}</h1>
+              <h1>{formatDate(post.date)}</h1>
               {post.excerpt.rendered}
               {post.title.rendered}
             </div>
