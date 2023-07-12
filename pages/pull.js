@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Image from "next/image";
+
+
 
 const pull = () => {
   const [data, setData] = useState(null);
@@ -45,6 +48,11 @@ const formatDate = (dateString) => {
         <div>
           {data.map((post) => (
             <div key={post.id}>
+              {post.yoast_head_json.og_image.map((image) => (
+                <div key={image.url}>
+                  <a href={image.url}>{image.url}</a>
+                </div>
+              ))}{" "}
               <h1>{formatDate(post.date)}</h1>
               {post.excerpt.rendered}
               {post.title.rendered}
