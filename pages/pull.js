@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
+import styles from '../styles/cards.module.css'
 
 
 
@@ -45,15 +46,15 @@ const formatDate = (dateString) => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
-        <div>
+        <div class={styles.container}>
           {data.map((post) => (
-            <div key={post.id}>
+            <div class={styles.card}key={post.id}>
               {post.yoast_head_json.og_image.map((image) => (
                 <div key={image.url}>
                   <img src={image.url} alt="Post Image" />
                 </div>
               ))}
-              <h1>{formatDate(post.date)}</h1>
+              <h2>{formatDate(post.date)}</h2>
               {post.excerpt.rendered}
               {post.title.rendered}
             </div>
