@@ -57,6 +57,7 @@ const formatDate = (dateString) => {
               <h2>{formatDate(post.date)}</h2>
               {post.excerpt.rendered}
               {post.title.rendered}
+              <button class={styles.button}>Read More</button>
             </div>
           ))}
         </div>
