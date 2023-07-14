@@ -48,16 +48,18 @@ const formatDate = (dateString) => {
       ) : (
         <div class={styles.container}>
           {data.map((post) => (
-            <div class={styles.card}key={post.id}>
+            <div class={styles.card} key={post.id}>
               {post.yoast_head_json.og_image.map((image) => (
-                <div key={image.url}>
+                <div class={styles.imageContainer} key={image.url}>
                   <img src={image.url} alt="Post Image" />
                 </div>
               ))}
-              <h2>{formatDate(post.date)}</h2>
-              {post.excerpt.rendered}
-              {post.title.rendered}
-              <button class={styles.button}>Read More</button>
+              <div>
+                <h1> {post.title.rendered}</h1>
+                <h2>{formatDate(post.date)}</h2>
+                {post.excerpt.rendered}
+                <button class={styles.button}>Read More</button>
+              </div>
             </div>
           ))}
         </div>
