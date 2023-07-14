@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
 
+
 }
 
 .card {
@@ -18,20 +19,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: 1px solid grey;
-
-    
-
 }
-
-/* .image {
-    clip-path: polygon(0 36%, 100% 35%, 100% 100%, 0% 100%);
-    border-radius: 1rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
 
 .imageContainer {
   width: 100%;
@@ -47,30 +37,25 @@
 
 
 .button {
-  background-color: #EA4C89;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 1rem;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+     background: linear-gradient(129deg, rgb(229, 59, 77) 50%, rgb(249, 113, 104) 100%);
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+    color:white;
+    font-size: 17px;
+    padding: 15px 35px 13px;
+    display: flex;
+    -webkit-transform: all .3s ease;
+    transform: all .3s ease;
+    box-shadow: none;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    text-align: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    line-height: normal;
+    transition: all .3s ease;
 }
 
 .button:hover,
@@ -80,6 +65,6 @@
 
 @media (min-width: 768px) {
 .card {
-    flex-direction: column;
+    flex-direction: row;
   }
 }

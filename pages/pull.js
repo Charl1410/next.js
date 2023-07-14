@@ -54,9 +54,9 @@ const formatDate = (dateString) => {
                   <img src={image.url} alt="Post Image" />
                 </div>
               ))}
-              <div>
+              <div class>
                 <h1> {post.title.rendered}</h1>
-                <h2>{formatDate(post.date)}</h2>
+                <h3>{formatDate(post.date)}</h3>
                 {post.excerpt.rendered}
                 <button class={styles.button}>Read More</button>
               </div>
