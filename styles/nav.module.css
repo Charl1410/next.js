@@ -1,0 +1,26 @@
+/* styles.css */
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust column width as needed */
+  padding: 10px;
+}
+
+.navlist {
+  list-style: none;
+  display: flex; /* Ensures the items inside each column are displayed in a row */
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-item a:hover {
+  color: #FF5733;
+}

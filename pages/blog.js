@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../components/card'
 
-const pull = () => {
+const blog = () => {
   return (
     <div>
       <Card />
@@ -9,4 +9,4 @@ const pull = () => {
   )
 }
 
-export default pull
+export default blog
