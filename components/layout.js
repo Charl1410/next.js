@@ -11,8 +11,9 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
         <link rel="icon" href="/favicon.ico" />
-        <meta
+        <meta 
           name="description"
           content="Learn how to build a personal website using Next.js"
         />
