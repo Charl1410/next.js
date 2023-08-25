@@ -1,12 +1,15 @@
 import React from 'react'
 import Card from '../components/card'
+import Layout from '../components/layout'
 
 const blog = () => {
   return (
-    <div>
-      <Card />
-    </div>
-  )
+    <Layout>
+      <div>
+        <Card />
+      </div>
+    </Layout>
+  );
 }
 
 export default blog

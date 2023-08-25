@@ -5,6 +5,8 @@ import Link from "next/link";
 
 
 export default function Home() {
+
+  //the layout wraps the app 
   return (
     <Layout home>
       <Head>

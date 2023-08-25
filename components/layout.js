@@ -4,6 +4,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import Navbar from "./Nav";
+// import Carousel from "./carousel";
 
 const name = "Charlotte";
 export const siteTitle = "Next.js Sample Website";
@@ -28,6 +29,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
   
+  {/* this will either run 2 bits of code, if it is the home first bit. If the other then it runs the other code  */}
       <header className={styles.header}>
         {home ? (
           <>
@@ -42,23 +44,10 @@ export default function Layout({ children, home }) {
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
+        
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
+           <Navbar />
           </>
         )}
       </header>
@@ -68,6 +57,7 @@ export default function Layout({ children, home }) {
           <Link href="/">← Back to home</Link>
         </div>
       )}
+        {/* <Carousel /> */}
     </div>
   );
 }

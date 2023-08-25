@@ -3,11 +3,19 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust column width as needed */
   padding: 10px;
+
 }
 
 .navlist {
   list-style: none;
-  display: flex; /* Ensures the items inside each column are displayed in a row */
+  display: flex;
+  flex-direction: row; /* Ensures the items inside each column are displayed in a row */
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.listitems {
+
 }
 
 .nav-item {

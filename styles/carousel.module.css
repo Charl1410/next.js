@@ -1,0 +1,27 @@
+/* Carousel.module.css */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-slide.active {
+  transform: translateX(0);
+}
