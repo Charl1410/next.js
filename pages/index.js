@@ -12,11 +12,10 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
       <section className={utilStyles.headingMd}>
         <Link href="/blog">Link to data pull page</Link>
-        <p> 
-          
-        </p>
+        <p>This is the landing page </p>
       </section>
     </Layout>
   );
