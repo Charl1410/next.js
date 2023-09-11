@@ -2,8 +2,10 @@ import React from 'react'
 
 const home = () => {
   return (
-    <div>home</div>
-  )
+    <Layout>
+      <div>home</div>
+    </Layout>
+  );
 }
 
 export default home

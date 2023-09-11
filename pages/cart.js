@@ -1,13 +1,12 @@
 import React from 'react'
-import Card from '../components/card'
 import Layout from '../components/layout'
 
-const blog = () => {
+const cart = () => {
   return (
     <Layout>
-        <Card />
+      <div>cart</div>
     </Layout>
   );
 }
 
-export default blog
+export default cart
