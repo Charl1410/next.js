@@ -12,18 +12,17 @@ const Navbar = () => {
     <div class="collapse navbar-collapse" id="navbarColor04">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home
+          <Link class="nav-link active" href="/">Home
             <span class="visually-hidden">(current)</span>
-          </a>
+          </Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <Link class="nav-link" href="/blog">Blog</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <Link class="nav-link" href="/products">Products</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -37,7 +36,7 @@ const Navbar = () => {
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-sm-2" type="search" placeholder="Search" />
+        <input class="form-control me-sm-2" type="search" placeholder="Search"/>
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
