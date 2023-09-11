@@ -17,7 +17,7 @@ const pull = () => {
           "https://fl1digital.com/wp-json/wp/v2/posts"
         );
         setData(response.data);
-        console.log(data);
+        // console.log(data + 'hello');
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -38,6 +38,8 @@ const pull = () => {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
+  
+
   //this maps all the titles pulled from the API call in a routed page called pull js
   return (
     <div>
@@ -50,11 +52,7 @@ const pull = () => {
           {/* mapping the post data */}
           {data.map((post) => (
             <div class={styles.card} key={post.id}>
-              {/* {post.yoast_head_json.og_image.map((image) => (
-                <div class={styles.imageContainer} key={image.url}>
-                  <img src={image.url} alt="Post Image" />
-                </div>
-              ))} */}
+              <img src={post.yoast_head_json.og_image} alt={post.title.rendered} />
               <div class>
                 <h1> {post.title.rendered}</h1>
                 <h3>{formatDate(post.date)}</h3>

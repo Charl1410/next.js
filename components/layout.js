@@ -13,20 +13,10 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta 
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+      
+       <titile>WooCommerce App</titile>
+       <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css"></link>
+
       </Head>
   
   {/* this will either run 2 bits of code, if it is the home first bit. If the other then it runs the other code  */}
@@ -57,7 +47,6 @@ export default function Layout({ children, home }) {
           <Link href="/">← Back to home</Link>
         </div>
       )}
-        {/* <Carousel /> */}
     </div>
   );
 }
