@@ -1,34 +1,28 @@
 /* styles.css */
-.navbar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust column width as needed */
-  padding: 10px;
+/* styles/Navbar.module.css */
 
+.navbar {
+  padding: 10px 0;
 }
 
-.navlist {
+.navList {
   list-style: none;
   display: flex;
-  flex-direction: row; /* Ensures the items inside each column are displayed in a row */
-  justify-content: space-evenly;
-  gap: 1rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.listitems {
-
+.navItem {
+  margin: 0 10px;
 }
 
-.nav-item {
-  margin: 0 15px;
-}
-
-.nav-item a {
+.navLink {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
-.nav-item a:hover {
-  color: #FF5733;
+.navLink:hover {
+  text-decoration: underline;
 }

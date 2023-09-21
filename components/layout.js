@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
       
-       <titile>WooCommerce App</titile>
+       {/* <titile>WooCommerce App</titile> */}
        <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css"></link>
 
       </Head>
@@ -23,6 +23,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
+          {/* This is the data that shows only if the homepage = true */}
             <Navbar />
             <Image
               priority
@@ -32,15 +33,15 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
-        
         ) : (
           <>
            <Navbar />
           </>
         )}
       </header>
+      {/* this children element passes the data from each page into children as a prop
+      have to wrap those pages in the Layout wrapper first */}
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>

@@ -9,12 +9,11 @@ export default function Home() {
   //the layout wraps the app 
   return (
     <Layout home>
-      <Head>
+      {/* <Head>
         <title>{siteTitle}</title>
-      </Head>
+      </Head> */}
 
       <section className={utilStyles.headingMd}>
-        <Link href="/blog">Link to data pull page</Link>
         <p>This is the landing page </p>
       </section>
     </Layout>
