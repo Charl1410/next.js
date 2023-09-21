@@ -4,7 +4,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import Navbar from "./Nav";
-// import Carousel from "./carousel";
+import Footer from "./Footer";
 
 const name = "Charlotte";
 export const siteTitle = "Next.js Sample Website";
@@ -13,17 +13,18 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-      
-       {/* <titile>WooCommerce App</titile> */}
-       <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css"></link>
-
+        {/* <titile>WooCommerce App</titile> */}
+        <link
+          rel="stylesheet"
+          href="https://bootswatch.com/5/morph/bootstrap.min.css"
+        ></link>
       </Head>
-  
-  {/* this will either run 2 bits of code, if it is the home first bit. If the other then it runs the other code  */}
+
+      {/* this will either run 2 bits of code, if it is the home first bit. If the other then it runs the other code  */}
       <header className={styles.header}>
         {home ? (
           <>
-          {/* This is the data that shows only if the homepage = true */}
+            {/* This is the data that shows only if the homepage = true */}
             <Navbar />
             <Image
               priority
@@ -33,10 +34,11 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
+            <Footer />
           </>
         ) : (
           <>
-           <Navbar />
+            <Navbar />
           </>
         )}
       </header>
@@ -46,6 +48,7 @@ export default function Layout({ children, home }) {
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
+          <Footer />
         </div>
       )}
     </div>

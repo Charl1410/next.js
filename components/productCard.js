@@ -34,7 +34,6 @@ const ProductList = () => {
           {products.map((product) => (
             <li key={product.id}>
               <h3>{product.title.rendered}</h3>
-              {/* You can display other product details here */}
             </li>
           ))}
         </ul>
