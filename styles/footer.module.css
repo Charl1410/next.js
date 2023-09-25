@@ -5,6 +5,7 @@
     bottom:0; */
     background-color: lightgray;
     width:100%;
+    bottom:0;
     /* height:40vh; */
     display:flex;
     flex-direction: row;

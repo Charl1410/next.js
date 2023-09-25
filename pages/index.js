@@ -4,6 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import Image from "next/image";
 import styles from '../styles/home.module.css'
 import Link from "next/link";
+import Button from '../components/button'
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <div className={styles.bannerContainer}>
         {/* <p>This is the homepage</p> */}
+        <h1 className={styles.header}>vestibulum</h1>
         <Image
           src="/images/homeBanner.jpg"
           alt="My Image"
@@ -24,9 +26,9 @@ export default function Home() {
           className={styles.banner}
         />
         <div className={styles.centeredButton}>
-          <button className={styles.shopButton}>
-            <Link href='/products'>Shop our range</Link>
-          </button>
+          <Button>
+            <Link href="/products">Shop the range</Link>
+          </Button>
         </div>
       </div>
 

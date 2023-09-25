@@ -13,6 +13,8 @@
     background-size: cover; /* Adjust the image size to cover the entire container */
    background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; 
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+
 
 }
 
