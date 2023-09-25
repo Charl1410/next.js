@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
 import styles from "../styles/cards.module.css";
+import Button from '../components/button'
 
 const pull = () => {
   //storing the data whether page is loading and errors in state
@@ -48,17 +49,17 @@ const pull = () => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
-        <div class={styles.container}>
+        <div className={styles.container}>
           {/* mapping the post data */}
           {data.map((post) => (
             <div className={styles.card} key={post.id}>
-              <img src={post.yoast_head_json.og_image} alt={post.title.rendered} />
-              <div>
+              {/* <img src={post.yoast_head_json.og_image} alt={post.title.rendered} /> */}
+              <div className={styles.center}>
                 <h1> {post.title.rendered}</h1>
                 <h3>{formatDate(post.date)}</h3>
                 {post.excerpt.rendered}
-                <button className={styles.button}>Read More</button>
-              </div>
+               <Button />
+            </div>
             </div>
           ))}
         </div>

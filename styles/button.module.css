@@ -1,0 +1,27 @@
+.button {
+    margin-top:10%;
+     background: linear-gradient(129deg, rgb(229, 59, 77) 50%, rgb(249, 113, 104) 100%);
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+    color:white;
+    font-size: 17px;
+    padding: 15px 35px 13px;
+    display: flex;
+    -webkit-transform: all .3s ease;
+    transform: all .3s ease;
+    box-shadow: none;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    text-align: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    line-height: normal;
+    transition: all .3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #F082AC;
+}

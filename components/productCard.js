@@ -11,8 +11,11 @@ const ProductList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axiosInstance.get("/product");
+        const response = await axios.get(
+          "https://sera.wpdev3.com/wp-json/wp/v2/product"
+        );
         setProducts(response.data);
+        console.log('hello')
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -22,6 +25,10 @@ const ProductList = () => {
 
     fetchData();
   }, []);
+
+   useEffect(() => {
+     console.log(products);
+   }, [products]);
 
   // Render the product list
   return (
