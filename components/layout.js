@@ -40,6 +40,7 @@ export default function Layout({ children, home }) {
         <>
         <Navbar />
           <div className={styles.backToHome}>
+            {children}
             <Link href="/">← Back to home</Link>
           </div>
           <Footer />
