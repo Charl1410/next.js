@@ -18,30 +18,32 @@ export default function Layout({ children, home }) {
           rel="stylesheet"
           href="https://bootswatch.com/5/morph/bootstrap.min.css"
         ></link>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
       </Head>
 
       <header className={styles.header}>
         {home ? (
           <>
-            {/* This is the data that shows only if the homepage = true */}
             <Navbar />
             {children}
             <Footer />
           </>
         ) : (
-          <>
-          </>
+          <></>
         )}
       </header>
-      {/* this children element passes the data from each page into children as a prop
-      have to wrap those pages in the Layout wrapper first */}
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+    
+          {!home && (
+        <>
+        <Navbar />
+          <div className={styles.backToHome}>
+            <Link href="/">← Back to home</Link>
+          </div>
           <Footer />
-        </div>
+        </>
       )}
     </div>
   );

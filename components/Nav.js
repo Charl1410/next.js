@@ -10,7 +10,7 @@ const Navbar = () => {
       <ul className={styles.navList}>
         <li className={styles.navItem}>
           <Link href="/">
-            <i class="material-icons">home</i>
+            <i className="material-icons">home</i>
           </Link>
         </li>
         <li className={styles.navItem}>

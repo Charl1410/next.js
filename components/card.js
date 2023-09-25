@@ -51,13 +51,13 @@ const pull = () => {
         <div class={styles.container}>
           {/* mapping the post data */}
           {data.map((post) => (
-            <div class={styles.card} key={post.id}>
+            <div className={styles.card} key={post.id}>
               <img src={post.yoast_head_json.og_image} alt={post.title.rendered} />
-              <div class>
+              <div>
                 <h1> {post.title.rendered}</h1>
                 <h3>{formatDate(post.date)}</h3>
                 {post.excerpt.rendered}
-                <button class={styles.button}>Read More</button>
+                <button className={styles.button}>Read More</button>
               </div>
             </div>
           ))}
