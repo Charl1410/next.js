@@ -8,11 +8,12 @@ export default function Home() {
 
   return (
     <Layout home>
-      {/* <Head>
+      <Head>
         <title>{siteTitle}</title>
-      </Head> */}
-      <section className={utilStyles.headingMd}>
-      </section>
+      </Head>
+      <p>This is the homepage</p>
+
+      <section className={utilStyles.headingMd}></section>
     </Layout>
   );
 }

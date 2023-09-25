@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from '../styles/nav.module.css'
 
+
   // components/Navbar.js
 
 const Navbar = () => {
@@ -8,7 +9,9 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <i class="material-icons">home</i>
+          </Link>
         </li>
         <li className={styles.navItem}>
           <Link href="/blog">Blog</Link>

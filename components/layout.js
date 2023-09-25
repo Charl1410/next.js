@@ -18,22 +18,15 @@ export default function Layout({ children, home }) {
           rel="stylesheet"
           href="https://bootswatch.com/5/morph/bootstrap.min.css"
         ></link>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </Head>
 
-      {/* this will either run 2 bits of code, if it is the home first bit. If the other then it runs the other code  */}
       <header className={styles.header}>
         {home ? (
           <>
             {/* This is the data that shows only if the homepage = true */}
             <Navbar />
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
+            {children}
             <Footer />
           </>
         ) : (
