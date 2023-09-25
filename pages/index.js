@@ -15,12 +15,12 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <div className={styles.bannerContainer}>
-        <p>This is the homepage</p>
+        {/* <p>This is the homepage</p> */}
         <Image
-          src="/images/banner.jpg"
+          src="/images/homeBanner.jpg"
           alt="My Image"
           width={1300} // Set the desired width
-          height={400} // Set the desired height
+          height={200} // Set the desired height
           className={styles.banner}
         />
         <div className={styles.centeredButton}>
