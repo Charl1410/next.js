@@ -1,4 +1,4 @@
-.container {
+.header {
     opacity:50%;
     color: white;
     border: white 2px solid;
@@ -13,10 +13,26 @@
     background-size: cover; /* Adjust the image size to cover the entire container */
    background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; 
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);  
 }
 
-.header {
-    color: white;
-    font-size: 300%;
+.card {
+    border: solid 2px black;
+    border-radius: 20px;
+    margin: 1%;
+    padding:5%;
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
+
+.cardContainer {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

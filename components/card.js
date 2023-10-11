@@ -18,7 +18,6 @@ const pull = () => {
           "https://fl1digital.com/wp-json/wp/v2/posts"
         );
         setData(response.data);
-        // console.log(data + 'hello');
         setLoading(false);
       } catch (error) {
         setError(error.message);

@@ -2,11 +2,12 @@
 /* styles/Navbar.module.css */
 
 .navbar {
-  /* position: fixed; */
+  position: fixed;
+  z-index: 1;
   top: 0;
   padding: 10px 0;
-  /* border: black 1px solid; */
   background-color: rgb(255, 255, 255);
+  color: black;
   width: 100%;
   /* margin-bottom: 5%; */
   display: flex;
@@ -18,11 +19,13 @@
 }
 
 .navList {
+  width:300px;
   list-style: none;
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
+
 }
 
 .navItem {
@@ -37,4 +40,17 @@
 
 .navLink:hover {
   text-decoration: underline;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.input {
+  border-radius: 10px;
+  border: none;
+  justify-content: flex-end;
+
 }

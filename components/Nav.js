@@ -1,9 +1,7 @@
 import Link from "next/link";
 import styles from '../styles/nav.module.css'
 
-
   // components/Navbar.js
-
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
@@ -23,6 +21,10 @@ const Navbar = () => {
           <Link href="/cart">Cart</Link>
         </li>
       </ul>
+      <div className={styles.searchContainer}>
+        <input className={styles.input} type="text" placeholder="Search..."></input>
+        <i className="material-icons">search</i>
+      </div>
     </nav>
   );
 };
