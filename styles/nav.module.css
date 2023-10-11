@@ -1,22 +1,36 @@
-/* styles.css */
-/* styles/Navbar.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.navContainer {
+  padding: 1%;
+  width: 100%;
+  position:fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  font-family:"montserrat";
+}
 
 .navbar {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  padding: 10px 0;
-  background-color: rgb(255, 255, 255);
-  color: black;
-  width: 100%;
-  /* margin-bottom: 5%; */
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  opacity: 100%;
-
-  
+  justify-content: center;
 }
+
+.navItem {
+  list-style: none;
+  padding: 0px 20px;
+} 
+
+.searchContainer  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} 
+
 
 .navList {
   width:300px;
@@ -25,32 +39,10 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-
-}
-
-.navItem {
-  margin: 0 10%;
-}
-
-.navLink {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-.navLink:hover {
-  text-decoration: underline;
-}
-
-.searchContainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .input {
-  border-radius: 10px;
-  border: none;
-  justify-content: flex-end;
-
+  border:none;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 100px 100px 0px;
 }
+
