@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from '../styles/productCard.module.css'
 import Button from "../components/button";
+import Banner from "./Banner";
 
 
 const ProductList = () => {
@@ -35,7 +36,7 @@ const ProductList = () => {
   // Render the product list
   return (
     <div className={styles.cardContainer}>
-      <h1 className={styles.header}>Product List</h1>
+      <Banner />
       {loading ? (
         <p>Loading...</p>
       ) : (

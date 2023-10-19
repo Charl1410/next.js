@@ -1,20 +1,3 @@
-.container {
-    opacity:50%;
-    color: white;
-    border: white 2px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height:30vh;
-    width:100%;
-    font-family: 'Times New Roman', Times, serif;
-    background-image: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWJzdHJhY3R8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
-    background-size: cover; /* Adjust the image size to cover the entire container */
-   background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: center; 
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
-}
 
 .header {
     color: white;

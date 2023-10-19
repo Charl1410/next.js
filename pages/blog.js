@@ -1,14 +1,12 @@
 import React from 'react'
 import Card from '../components/card'
 import Layout from '../components/layout'
-import styles from '../styles/blog.module.css'
+import Banner from '../components/Banner'
 
 const blog = () => {
   return (
     <Layout>
-      <div className={styles.container}>
-        <h1 className={styles.header}>Blog</h1>
-      </div>
+      <Banner />
       <Card />
     </Layout>
   );
