@@ -5,6 +5,8 @@ import styles from "../styles/cards.module.css";
 import Button from '../components/button'
 
 const pull = () => {
+  const buttonName = "Read more"
+  
   //storing the data whether page is loading and errors in state
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -57,8 +59,8 @@ const pull = () => {
                 <h1> {post.title.rendered}</h1>
                 <h3>{formatDate(post.date)}</h3>
                 {post.excerpt.rendered}
-               <Button />
-            </div>
+                <Button buttonName={buttonName}/>
+              </div>
             </div>
           ))}
         </div>

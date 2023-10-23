@@ -7,6 +7,7 @@ import Link from "next/link";
 import Button from '../components/button'
 
 export default function Home() {
+  const buttonName = "Shop the range"
 
   return (
     <Layout home>
@@ -24,8 +25,8 @@ export default function Home() {
           className={styles.banner}
         />
         <div className={styles.centeredButton}>
-          <Button>
-            <Link href="/products">Shop the range</Link>
+          <Button buttonName={buttonName}>
+            <Link href="/products"></Link>
           </Button>
         </div>
       </div>

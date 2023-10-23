@@ -8,6 +8,7 @@ import Banner from "./Banner";
 const ProductList = () => {
   //storing the page name to pass as prop to banner
   const functionName = "Products";
+  const buttonName = "View product"
   // State to store the product data and loading status
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -52,7 +53,7 @@ const ProductList = () => {
               <img src={product._links.href} alt={product.title.rendered} />
 
               <p>{product.content.rendered}</p>
-              <Button />
+              <Button buttonName={buttonName} />
             </div>
           ))}
         </ul>
