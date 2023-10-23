@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
 import styles from "../styles/cards.module.css";
-import Button from '../components/button'
+import Button from './Button'
 
-const pull = () => {
+const Card = () => {
   const buttonName = "Read more"
   
   //storing the data whether page is loading and errors in state
@@ -69,4 +69,4 @@ const pull = () => {
   );
 };
 
-export default pull;
+export default Card;

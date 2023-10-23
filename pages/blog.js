@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from '../components/card'
-import Layout from '../components/layout'
+import Card from '../components/Card'
+import Layout from '../components/Layout'
 import Banner from '../components/Banner'
 
 const blog = () => {

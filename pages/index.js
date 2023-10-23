@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/Layout";
 import utilStyles from "../styles/utils.module.css";
 import Image from "next/image";
 import styles from '../styles/home.module.css'
 import Link from "next/link";
-import Button from '../components/button'
+import Button from '../components/Button'
 
 export default function Home() {
   const buttonName = "Shop the range"

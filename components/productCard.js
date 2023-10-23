@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from '../styles/productCard.module.css'
-import Button from "../components/button";
+import Button from "./Button";
 import Banner from "./Banner";
 
 
