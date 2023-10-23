@@ -4,9 +4,10 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
 const blog = () => {
+  const functionName = "Blog"
   return (
     <Layout>
-      <Banner />
+      <Banner pageName={functionName}/>
       <Card />
     </Layout>
   );

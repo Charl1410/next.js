@@ -6,6 +6,8 @@ import Banner from "./Banner";
 
 
 const ProductList = () => {
+  //storing the page name to pass as prop to banner
+  const functionName = "Products";
   // State to store the product data and loading status
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -36,7 +38,7 @@ const ProductList = () => {
   // Render the product list
   return (
     <div className={styles.cardContainer}>
-      <Banner />
+      <Banner pageName={functionName}/>
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -46,12 +48,9 @@ const ProductList = () => {
               <h1 key={product.id}>
                 <h3>{product.title.rendered}</h3>
               </h1>
-    
-                <img
-                  src={product._links.href}
-                  alt={product.title.rendered}
-                />
-              
+
+              <img src={product._links.href} alt={product.title.rendered} />
+
               <p>{product.content.rendered}</p>
               <Button />
             </div>

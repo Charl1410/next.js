@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 .navContainer {
+  color: white;
   padding: 1%;
   width: 100%;
   position:fixed;
@@ -9,14 +10,14 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: white;
+  /* background-color: white; */
   font-family:"montserrat";
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .navItem {
@@ -26,9 +27,10 @@
 
 .searchContainer  {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
+  margin-right: 2%;
 } 
 
 
@@ -43,6 +45,9 @@
 
 .input {
   border:none;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 100px 100px 0px;
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 100px 100px 0px;
+  background-color: rgba(255, 255, 255, 0.2); /* Use RGBA for transparency */
+  margin-right: 1%;
 }
 

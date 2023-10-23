@@ -30,10 +30,10 @@ const Navbar = () => {
           placeholder="Search..."
         ></input>
         <i className="material-icons">search</i>
+        <Link href="/cart">
+          <i className="material-icons">shopping_cart</i>
+        </Link>
       </div>
-      <Link href="/cart">
-        <i className="material-icons">shopping_cart</i>
-      </Link>
     </div>
   );
 };
