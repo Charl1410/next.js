@@ -13,6 +13,7 @@ const Card = () => {
   const [error, setError] = useState("");
 
   //fetching the data using axios
+  //the function will run on mount   
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,9 +31,16 @@ const Card = () => {
     fetchData();
   }, []);
 
+  //this console logs the data every time the data changes
   useEffect(() => {
-    console.log(data);
+    if (data) {
+      console.log(data[0].yoast_head_json.og_image[0].url);
+    }
+    else {
+      console.log('data not found:' + data)
+    }
   }, [data]);
+
 
   //function to format the date
   const formatDate = (dateString) => {
@@ -40,7 +48,6 @@ const Card = () => {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
-  
 
   //this maps all the titles pulled from the API call in a routed page called pull js
   return (
@@ -54,12 +61,13 @@ const Card = () => {
           {/* mapping the post data */}
           {data.map((post) => (
             <div className={styles.card} key={post.id}>
-              {/* <img src={post.yoast_head_json.og_image} alt={post.title.rendered} /> */}
+              {post.yoast_head_json.og_image ? <div>POOOOO</div> :
+              <div>RIPP</div> }
               <div className={styles.center}>
                 <h1> {post.title.rendered}</h1>
                 <h3>{formatDate(post.date)}</h3>
                 {post.excerpt.rendered}
-                <Button buttonName={buttonName}/>
+                <Button buttonName={buttonName} />
               </div>
             </div>
           ))}

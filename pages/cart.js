@@ -3,11 +3,9 @@ import Layout from '../components/Layout'
 import Banner from '../components/Banner'
 
 const cart = () => {
-    const functionName = "Cart";
-
   return (
     <Layout>
-      <Banner pageName={functionName}/>
+      <Banner pageName={"Cart"}/>
     </Layout>
   );
 }
