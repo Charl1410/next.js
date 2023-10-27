@@ -13,13 +13,14 @@ const Card = () => {
   const [error, setError] = useState("");
 
   //fetching the data using axios
-  //the function will run on mount   
+  //the function will run on mount
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
           "https://fl1digital.com/wp-json/wp/v2/posts"
         );
+        //data state is now set to the API data 
         setData(response.data);
         setLoading(false);
       } catch (error) {
@@ -32,14 +33,16 @@ const Card = () => {
   }, []);
 
   //this console logs the data every time the data changes
-  useEffect(() => {
-    if (data) {
-      console.log(data[0].yoast_head_json.og_image[0].url);
-    }
-    else {
-      console.log('data not found:' + data)
-    }
-  }, [data]);
+ useEffect(() => {
+   if (data) {
+     console.log(data[0].yoast_head_json.og_image[0].url);
+     const imageURLS = data[0].yoast_head_json.og_image[0].url;
+    console.log('image urls:' + imageURLS);
+   } else {
+     console.log("data not found: null");
+   }
+ }, [data]);
+
 
 
   //function to format the date
@@ -61,9 +64,20 @@ const Card = () => {
           {/* mapping the post data */}
           {data.map((post) => (
             <div className={styles.card} key={post.id}>
-              {post.yoast_head_json.og_image ? <div>POOOOO</div> :
-              <div>RIPP</div> }
-              <div className={styles.center}>
+              <div className={styles.imageContainer}>
+                {post.yoast_head_json &&
+                post.yoast_head_json.og_image &&
+                post.yoast_head_json.og_image[0] ? (
+                  <img
+                    className={styles.cardImage}
+                    src={post.yoast_head_json.og_image[0].url}
+                    alt="Post Image"
+                  />
+                ) : (
+                  <div>No Image Available</div>
+                )}{" "}
+              </div>
+              <div className={styles.cardText}>
                 <h1> {post.title.rendered}</h1>
                 <h3>{formatDate(post.date)}</h3>
                 {post.excerpt.rendered}
