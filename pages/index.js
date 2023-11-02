@@ -7,7 +7,6 @@ import Link from "next/link";
 import Button from '../components/Button'
 
 export default function Home() {
-  const buttonName = "Shop the range"
 
   return (
     <Layout home>
@@ -25,13 +24,20 @@ export default function Home() {
           className={styles.banner}
         />
         <div className={styles.centeredButton}>
-          <Button buttonName={buttonName}>
+          <Button buttonName={"Shop the range"}>
             <Link href="/products"></Link>
           </Button>
         </div>
       </div>
 
-      <section className={utilStyles.headingMd}></section>
+      <section className={styles.shopSections}>
+        <div className={styles.shopBox}>Shop Mens</div>
+        <div className={styles.shopBox}>Shop Womens</div>
+        <div className={styles.shopBox}>Shop Brands</div>
+        <div className={styles.shopBox}>Shop Styles</div>
+      </section>
+
+      {/* <section className={utilStyles.headingMd}></section> */}
     </Layout>
   );
 }

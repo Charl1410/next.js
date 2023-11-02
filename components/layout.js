@@ -9,6 +9,7 @@ import Footer from "./Footer";
 const name = "Charlotte";
 export const siteTitle = "Next.js Sample Website";
 
+
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
