@@ -31,7 +31,14 @@ export default function Home() {
       </div>
 
       <section className={styles.shopSections}>
-        <div className={styles.shopBox}>Shop Mens</div>
+        <div className={styles.shopBox}>
+          <h1>Shop mens</h1>
+          <Image
+            src="/images/menShoes.avif"
+            alt="My Image"
+            fill={true}
+            className={styles.shopCardImage}/>
+        </div>
         <div className={styles.shopBox}>Shop Womens</div>
         <div className={styles.shopBox}>Shop Brands</div>
         <div className={styles.shopBox}>Shop Styles</div>

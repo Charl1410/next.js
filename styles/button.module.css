@@ -1,5 +1,5 @@
 .button {
-    margin-top:10%;
+    /* margin-top:10%; */
      background: linear-gradient(129deg, rgb(229, 59, 77) 50%, rgb(249, 113, 104) 100%);
     font-family: "Montserrat",sans-serif;
     font-weight: 800;
@@ -21,7 +21,6 @@
     transition: all .3s ease;
 }
 
-.button:hover,
-.button:focus {
-  background-color: #F082AC;
+.button:hover{
+background-color: #B8D8E3;
 }

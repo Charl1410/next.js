@@ -62,8 +62,12 @@ const Card = () => {
       ) : (
         <div className={styles.container}>
           {/* mapping the post data */}
-          {data.map((post) => (
-            <div className={styles.card} key={post.id}>
+          {data.map((post, index) => (
+            <div
+              className={index === 0 ? styles.firstCard : styles.card}
+              key={post.id}
+            >
+              {" "}
               <div className={styles.imageContainer}>
                 {post.yoast_head_json &&
                 post.yoast_head_json.og_image &&
@@ -80,7 +84,7 @@ const Card = () => {
               <div className={styles.cardText}>
                 <h1> {post.title.rendered}</h1>
                 <h3>{formatDate(post.date)}</h3>
-                {post.excerpt.rendered}
+                <p>{post.excerpt.rendered.slice(0, 100)}...</p>
                 <Button buttonName={buttonName} />
               </div>
             </div>

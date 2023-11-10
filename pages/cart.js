@@ -5,7 +5,6 @@ import Banner from '../components/Banner'
 const cart = () => {
   return (
     <Layout>
-      <Banner pageName={"Cart"}/>
     </Layout>
   );
 }
